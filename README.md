@@ -24,10 +24,13 @@ We follow the steps of [this repository](https://github.com/microsoft/human-pose
 - Resnet-50: [Download](https://download.pytorch.org/models/resnet50-19c8e357.pth), 
 - MobileNet_V2: [Google Drive](https://drive.google.com/open?id=1jlto6HRVD3ipNkAl1lNhDbkBp7HylaqR) from [this repo](https://github.com/tonylins/pytorch-mobilenet-v2).
 - More ...
+
 ### Create the `o` directory to preserve each experiment's output 
+
 ```
 mkdir o  
 ```
+
 ### Train the model
 ```
 python train.py \
@@ -39,18 +42,19 @@ other optional commands for training
 
 ```
 --batchsize 32  
---param_flop   // report parameters and FLOPs
---search search_method_name   // options: ['None','random','sync','first_order_gradient','second_order_gradient']
+--param_flop  // report parameters and FLOPs
+--search search_method_name  // ['None','random','sync','first_order_gradient','second_order_gradient']
 --debug   // visualize the input data
---visualize // visualize the predicted heatmaps for an image (per 5 epcohes in training)
---show_arch_value   // print the parameters of architecture in the training process
-```
+--visualize // visualize the predicted heatmaps 
+--show_arch_value   // print the parameters of architecture
+
 #### Distributed multi-gpu training in a single machine (node)
 
 ```
 sh distributed.sh
 ```
 `nproc_per_node` means how many gpus are used.
+
 ### Test the model
 ```
 python test.py \
@@ -64,9 +68,9 @@ other optional commands for testing
 ```
 --visualize   // visualize the predicted heatmaps
 --param_flop
----margin 1.25  // [1.0,1.5] margin between bbox border and input size when testing 
+---margin 1.25  // [1.0,1.5] margin between bbox border and input size
 --flip_test   // horizontal flip test
---use_dt   // use the detection results of COCO val set or test-dev set
+--use_dt   // use the detection results
 ```
 
 ### Detailed Settings
