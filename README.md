@@ -47,7 +47,7 @@ other optional commands for training
 --debug   // visualize the input data
 --visualize // visualize the predicted heatmaps 
 --show_arch_value   // print the parameters of architecture
-
+```
 #### Distributed multi-gpu training in a single machine (node)
 
 ```
