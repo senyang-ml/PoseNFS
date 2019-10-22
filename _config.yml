@@ -1,1 +1,4 @@
 theme: jekyll-theme-minimal
+logo: [logo.png]
+title: [PoseNFS|NAS for human pose estimation]
+description: [Pose Neural Fabrisc Search]
